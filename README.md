@@ -56,8 +56,10 @@ Ele funciona entre computadores que se enxergam na rede:
 | 🎚️ **Qualidade ajustável** | Até 1440p ou resolução original, de 15 a 60 FPS. No modo automático usa a placa de vídeo para codificar. |
 | 🔁 **Trocar sem cair** | Troque de tela, janela ou qualidade sem derrubar quem está assistindo. |
 | 👥 **Salas** | Crie uma sala: todo mundo da rede vê e entra com um clique, e qualquer um pode transmitir. |
-| 🧑‍🤝‍🧑 **Amigos** | Adicione pelo ID de 9 dígitos. A pessoa recebe um pedido de amizade e aceita ou recusa. |
-| 🖼️ **Perfil** | Escolha nome e foto. Seus amigos veem os dois. |
+| 🧑‍🤝‍🧑 **Amigos** | Adicione pelo ID de 9 dígitos ou pelo **@ do Discord**. A pessoa recebe um pedido de amizade e aceita ou recusa. |
+| 🖼️ **Perfil** | Escolha nome e foto, ou use os do Discord. Seus amigos veem os dois. |
+| 💬 **Conectar com Discord** | Opcional: entre com sua conta do Discord, sem servidor, para usar seu nome e foto de lá e ser achado pelo seu @. |
+| 🌗 **Modo claro e escuro** | Troque no botão ao lado do seu nome. |
 | 📺 **Várias telas ao mesmo tempo** | Assista mais de uma pessoa, em grade, destaque ou lado a lado. |
 | 🪟 **Modo PIP** | Um mini-player sempre por cima das outras janelas, que você arrasta e deixa transparente. |
 | 📌 **Fixar na chamada do Discord** | Prende o vídeo em cima da área da chamada do Discord, como o compartilhamento de tela de lá. |
@@ -139,11 +141,16 @@ Enquanto transmite, a barra **AO VIVO** embaixo permite **trocar a fonte**, muda
 
 - Seu **ID** de 9 dígitos fica no topo do Gritude. Ele é fixo para o seu PC: continua o mesmo se você reinstalar.
 - Clique em **+** ao lado de **Amigos**, digite o ID de alguém e envie o pedido. A pessoa aceita ou recusa.
+- Também dá para digitar o **@ do Discord** (por exemplo `@fulano`). Funciona com quem está na mesma rede, no Radmin/Hamachi ou já conectado com você, e que conectou o Discord no Gritude.
 - Em **Configurações**, a opção **Só amigos podem me chamar** recusa sozinha convites de quem não é seu amigo.
 
 ### Perfil
 
 Clique na sua foto, no canto superior esquerdo, para abrir **Meu perfil**: escolha uma foto, troque o nome e ligue ou desligue o **status no Discord**.
+
+**Conectar com Discord** (em **Meu perfil**): o navegador abre a página oficial do Discord; depois de autorizar, volte ao Gritude. Seu nome e foto passam a ser os do Discord (dá para trocar depois) e quem está na sua rede pode te adicionar pelo @. Para esconder seu @, desligue a opção em **Meu perfil**.
+
+**Modo claro / escuro**: clique no ícone de sol ou lua ao lado do seu nome, no topo da barra lateral. A escolha fica salva.
 
 ### Assistindo
 
@@ -183,6 +190,7 @@ Clique na sua foto, no canto superior esquerdo, para abrir **Meu perfil**: escol
 
 - **Nada passa por servidor.** O vídeo e o áudio vão direto de um PC para o outro, e os PCs se encontram sozinhos na rede.
 - **Sem conta e sem cadastro.** Seu nome, foto e amigos ficam guardados só no seu PC.
+- **Conectar com Discord é opcional.** O login é feito direto entre o seu PC e o Discord, sem servidor do Gritude. O Gritude só lê seu nome, @ e foto (escopo `identify`): não lê mensagens, servidores nem a lista de amigos. O seu @ só é mostrado para quem está na sua rede ou conectado com você.
 - **Você controla quem assiste.** Sua tela só chega a quem você chamou ou a quem está na sua sala enquanto você transmite nela. A barra **AO VIVO** mostra quem está assistindo.
 - **Status no Discord é opcional.** Ele só conversa com o Discord aberto no seu próprio PC e pode ser desligado em **Meu perfil**.
 
@@ -224,6 +232,24 @@ Use o modo de áudio **Som do PC, sem o Discord** (é o padrão) ou **Só o som 
 <summary><strong>Aparece "O Windows protegeu o computador"</strong></summary>
 
 É o SmartScreen avisando que o instalador não tem assinatura digital paga. Clique em **Mais informações → Executar assim mesmo**. Veja [Download e instalação](#download-e-instalação).
+
+</details>
+
+<details>
+<summary><strong>"Conectar com Discord" não funciona</strong></summary>
+
+- Depois de autorizar no navegador, a página deve dizer **Discord conectado!**. Volte ao Gritude.
+- Se o Gritude avisar que a **porta 53134** está em uso, feche o programa que está usando essa porta (ou reinicie o PC) e tente de novo.
+- Se demorar mais de 5 minutos no navegador, o login expira: clique em **Conectar com Discord** outra vez.
+
+</details>
+
+<details>
+<summary><strong>Não acho meu amigo pelo @ do Discord</strong></summary>
+
+- A pessoa precisa ter **conectado o Discord** no Gritude e estar com ele aberto.
+- Vocês precisam se enxergar: mesma rede, mesmo Radmin/Hamachi ou já conectados. Se não, adicione pelo **ID de 9 dígitos**.
+- Confira se ela não desligou a opção de mostrar o @ em **Meu perfil**.
 
 </details>
 
