@@ -13,6 +13,7 @@
   <a href="https://github.com/mattmachad/Gritude-App/releases/latest"><img alt="Baixar a última versão" src="https://img.shields.io/github/v/release/mattmachad/Gritude-App?label=baixar&style=for-the-badge&color=6155f5"></a>
   <img alt="Windows 10 e 11" src="https://img.shields.io/badge/Windows-10%20%7C%2011-0078d4?style=for-the-badge">
   <img alt="Linux" src="https://img.shields.io/badge/Linux-Ubuntu-e95420?style=for-the-badge">
+  <img alt="macOS" src="https://img.shields.io/badge/macOS-experimental-555555?style=for-the-badge">
   <img alt="Gratuito" src="https://img.shields.io/badge/pre%C3%A7o-gratuito-34c759?style=for-the-badge">
 </p>
 
@@ -86,6 +87,8 @@ Funciona também com quem usa a versão completa do Gritude.
    | `Gritude-Portatil-x.y.z.exe` | Roda sem instalar (bom para pendrive). Não se atualiza sozinho. |
    | `Gritude-x.y.z-linux-amd64.deb` | **Linux (Ubuntu/Debian).** Abra com a Central de Aplicativos ou rode `sudo apt install ./Gritude-x.y.z-linux-amd64.deb`. |
    | `Gritude-x.y.z-linux-x86_64.AppImage` | **Linux (qualquer distribuição).** Dê permissão de execução e abra. |
+   | `Gritude-x.y.z-mac-apple-silicon.dmg` | **Mac com chip M1, M2, M3 ou M4.** Experimental. |
+   | `Gritude-x.y.z-mac-intel.dmg` | **Mac com processador Intel.** Experimental. |
 
 3. Abra o arquivo baixado e siga o instalador.
 
@@ -97,6 +100,8 @@ Funciona também com quem usa a versão completa do Gritude.
 **Requisitos:** Windows 10 ou 11 (64 bits), ou Linux 64 bits (testado no Ubuntu 24.04). Uma placa de vídeo recente ajuda a transmitir em alta qualidade.
 
 > **No Linux:** os modos de áudio **Som do PC, sem o Discord** e **Só o som da janela compartilhada** são exclusivos do Windows. No Ubuntu com Wayland, o próprio sistema pergunta qual tela ou janela compartilhar.
+
+> **No Mac (experimental):** o app não tem assinatura da Apple. Na primeira vez, clique com o botão direito no Gritude e escolha **Abrir**. O som do PC exige macOS 14.2 ou mais novo, e a versão para Mac não se atualiza sozinha.
 
 ## Primeiros passos
 
