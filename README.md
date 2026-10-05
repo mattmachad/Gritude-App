@@ -12,6 +12,7 @@
 <p align="center">
   <a href="https://github.com/mattmachad/Gritude-App/releases/latest"><img alt="Baixar a última versão" src="https://img.shields.io/github/v/release/mattmachad/Gritude-App?label=baixar&style=for-the-badge&color=6155f5"></a>
   <img alt="Windows 10 e 11" src="https://img.shields.io/badge/Windows-10%20%7C%2011-0078d4?style=for-the-badge">
+  <img alt="Linux" src="https://img.shields.io/badge/Linux-Ubuntu-e95420?style=for-the-badge">
   <img alt="Gratuito" src="https://img.shields.io/badge/pre%C3%A7o-gratuito-34c759?style=for-the-badge">
 </p>
 
@@ -83,6 +84,8 @@ Funciona também com quem usa a versão completa do Gritude.
    |---|---|
    | `Gritude-Setup-x.y.z.exe` | **Recomendado.** Instala o Gritude e **atualiza sozinho**. |
    | `Gritude-Portatil-x.y.z.exe` | Roda sem instalar (bom para pendrive). Não se atualiza sozinho. |
+   | `Gritude-x.y.z-linux-amd64.deb` | **Linux (Ubuntu/Debian).** Abra com a Central de Aplicativos ou rode `sudo apt install ./Gritude-x.y.z-linux-amd64.deb`. |
+   | `Gritude-x.y.z-linux-x86_64.AppImage` | **Linux (qualquer distribuição).** Dê permissão de execução e abra. |
 
 3. Abra o arquivo baixado e siga o instalador.
 
@@ -91,7 +94,9 @@ Funciona também com quem usa a versão completa do Gritude.
 > O Gritude ainda não tem assinatura digital paga, então o Windows SmartScreen avisa na primeira vez.
 > Clique em **Mais informações** e depois em **Executar assim mesmo**. Esse aviso só aparece na instalação: as atualizações automáticas não passam por ele.
 
-**Requisitos:** Windows 10 ou 11 (64 bits). Uma placa de vídeo recente ajuda a transmitir em alta qualidade.
+**Requisitos:** Windows 10 ou 11 (64 bits), ou Linux 64 bits (testado no Ubuntu 24.04). Uma placa de vídeo recente ajuda a transmitir em alta qualidade.
+
+> **No Linux:** os modos de áudio **Som do PC, sem o Discord** e **Só o som da janela compartilhada** são exclusivos do Windows. No Ubuntu com Wayland, o próprio sistema pergunta qual tela ou janela compartilhar.
 
 ## Primeiros passos
 
@@ -259,8 +264,10 @@ A versão portátil não se atualiza: baixe a nova pela [página de versões](ht
 </details>
 
 <details>
-<summary><strong>A imagem trava ou fica pixelada</strong></summary>
+<summary><strong>A imagem trava, fica pixelada ou fica verde</strong></summary>
 
+- Quem está assistindo pode clicar em **Recarregar transmissão** (também em tela cheia e na janelinha). O Gritude pede uma imagem nova sem cortar o som; se não resolver, reconecta, e o som pode falhar por um instante.
+- O Gritude também tenta recuperar sozinho quando percebe que o vídeo parou.
 - Baixe a **resolução** (1080p ou 720p) ou os **FPS** (30).
 - Pela internet ou pelo Radmin, a velocidade depende da internet de quem transmite (upload). Tente o **Bitrate máximo** em 4 ou 8 Mbps.
 - Com muita gente assistindo, deixe o **repasse P2P** ligado em **Configurações** para dividir o envio.
