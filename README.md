@@ -73,6 +73,7 @@ Funciona também com quem usa a versão completa do Gritude.
 | 📺 **Várias telas ao mesmo tempo** | Assista mais de uma pessoa, em grade, destaque ou lado a lado. Se você também está transmitindo, sua tela vira uma miniatura no canto. |
 | 🪟 **Modo PIP** | Um mini-player sempre por cima das outras janelas, que você arrasta e deixa transparente. |
 | 📌 **Fixar na chamada do Discord** | Prende o vídeo em cima da área da chamada do Discord, como o compartilhamento de tela de lá. |
+| ⏱️ **Reconexão de 15s** | Se você cair da transmissão, fechar o app ou sair por engano, tem 15 segundos para voltar com um clique. |
 | 🟣 **Status no Discord** | Opcional: seu perfil do Discord mostra quando você está transmitindo ou assistindo. |
 | ➕ **Convidar pelo Discord** | Numa sala, o **+** do chat do Discord mostra *Convidar para Gritude*. Quem aceita entra na sala, mesmo fora da sua rede. |
 
@@ -277,6 +278,13 @@ A versão portátil não se atualiza: baixe a nova pela [página de versões](ht
 - Pela internet ou pelo Radmin, a velocidade depende da internet de quem transmite (upload). Tente o **Bitrate máximo** em 4 ou 8 Mbps.
 - Com muita gente assistindo, deixe o **repasse P2P** ligado em **Configurações** para dividir o envio.
 - Deixe o **Codec** em **Automático** para usar a placa de vídeo.
+
+</details>
+
+<details>
+<summary><strong>Caí da transmissão ou saí sem querer</strong></summary>
+
+O Gritude abre um aviso com contagem regressiva de **15 segundos** para você voltar com um clique em **Reconectar**. Se você reabrir o app dentro desse tempo, o botão continua disponível. Se a transmissão ou sala tiver sido encerrada, o app avisa com clareza.
 
 </details>
 
