@@ -70,6 +70,7 @@ Funciona também com quem usa a versão completa do Gritude.
 | 🖼️ **Perfil** | Escolha nome e foto, ou use os do Discord. Seus amigos veem os dois. |
 | 💬 **Conectar com Discord** | Opcional: entre com sua conta do Discord, sem servidor, para usar seu nome e foto de lá e ser achado pelo seu @. |
 | 🌗 **Modo claro e escuro** | Troque no botão ao lado do seu nome. |
+| ⚙️ **Aceleração de hardware opcional** | Ative ou desative em Configurações. A escolha fica salva e vale depois de fechar e abrir o Gritude. |
 | 📺 **Várias telas ao mesmo tempo** | Assista mais de uma pessoa, em grade, destaque ou lado a lado. Se você também está transmitindo, sua tela vira uma miniatura no canto. |
 | 🪟 **Modo PIP** | Um mini-player sempre por cima das outras janelas, que você arrasta e deixa transparente. |
 | 📌 **Fixar na chamada do Discord** | Prende o vídeo em cima da área da chamada do Discord, como o compartilhamento de tela de lá. |
@@ -277,7 +278,8 @@ A versão portátil não se atualiza: baixe a nova pela [página de versões](ht
 - Baixe a **resolução** (1080p ou 720p) ou os **FPS** (30).
 - Pela internet ou pelo Radmin, a velocidade depende da internet de quem transmite (upload). Tente o **Bitrate máximo** em 4 ou 8 Mbps.
 - Com muita gente assistindo, deixe o **repasse P2P** ligado em **Configurações** para dividir o envio.
-- Deixe o **Codec** em **Automático** para usar a placa de vídeo.
+- Se houver falhas gráficas, experimente desmarcar **Configurações → Usar aceleração de hardware**, clique em **Salvar** e feche e abra o Gritude. Para reativar, marque novamente e reabra. Isso pode aumentar o uso da CPU; não é uma garantia de corrigir toda falha de vídeo.
+- Deixe o **Codec** em **Automático** para o aplicativo escolher entre os recursos disponíveis.
 
 </details>
 
