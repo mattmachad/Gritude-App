@@ -44,7 +44,7 @@
 
 ## O que é
 
-O **Gritude** é um app para Windows que transmite a sua tela (ou uma janela) para outras pessoas que também estão com ele aberto. O vídeo e o som vão **direto de um PC para o outro**: não existe cadastro nem servidor do Gritude no meio.
+O **Gritude** é um app para Windows que transmite a sua tela (ou uma janela) para outras pessoas que também estão com ele aberto. O vídeo e o som vão **direto de um PC para o outro**, sem cadastro. Desde a 1.14, o Gritude também usa um **servidor de conexão** para os amigos se acharem mais rápido e, para amigos liberados, um **servidor de vídeo** que entrega a transmissão com qualidade melhor (veja [Privacidade](#privacidade)).
 
 Ele acha seus amigos de três jeitos:
 
@@ -52,7 +52,7 @@ Ele acha seus amigos de três jeitos:
 - à distância, numa **rede virtual** como o [Radmin VPN](https://www.radmin-vpn.com/br/) ou o Hamachi: também aparecem sozinhos;
 - **pela internet, só com o ID** de 9 dígitos, sem instalar mais nada. Se não der certo, há o **código de convite**, que vocês trocam pelo chat do Discord.
 
-Funciona também com quem usa a versão completa do Gritude.
+Desde a 1.14, esta é a mesma versão completa do Gritude.
 
 ## Recursos
 
@@ -66,9 +66,10 @@ Funciona também com quem usa a versão completa do Gritude.
 | 🌐 **Pela internet sem servidor** | Adicione um amigo pelo ID e o Gritude o acha pela internet, mesmo fora da sua rede e sem Radmin. |
 | 🔗 **Código de convite** | Plano B para quando vocês não se acham: um manda o convite pelo chat, o outro cola a resposta. |
 | 🌳 **Repasse P2P** | Quem assiste pode repassar a imagem para outras pessoas da mesma transmissão, então você não precisa mandar para todo mundo sozinho. |
+| 🚀 **Servidor de vídeo** | Para amigos liberados: você manda a tela **uma vez** para o servidor e ele entrega para cada um, com a qualidade que a internet de cada pessoa aguenta. Se o servidor falhar, volta sozinho para o P2P. Liga e desliga em **Configurações → Usar servidor de vídeo**. |
 | 🧑‍🤝‍🧑 **Amigos** | Adicione pelo ID de 9 dígitos ou pelo **@ do Discord**. A pessoa recebe um pedido de amizade e aceita ou recusa. |
 | 🖼️ **Perfil** | Escolha nome e foto, ou use os do Discord. Seus amigos veem os dois. |
-| 💬 **Conectar com Discord** | Opcional: entre com sua conta do Discord, sem servidor, para usar seu nome e foto de lá e ser achado pelo seu @. |
+| 💬 **Conectar com Discord** | Opcional: entre com sua conta do Discord para usar seu nome e foto de lá, ser achado pelo seu @, proteger seu ID e usar o servidor de vídeo (se estiver liberado). |
 | 🌗 **Modo claro e escuro** | Troque no botão ao lado do seu nome. |
 | ⚙️ **Aceleração de hardware opcional** | Ative ou desative em Configurações. A escolha fica salva e vale depois de fechar e abrir o Gritude. |
 | 📺 **Várias telas ao mesmo tempo** | Assista mais de uma pessoa, em grade, destaque ou lado a lado. Se você também está transmitindo, sua tela vira uma miniatura no canto. |
@@ -234,11 +235,12 @@ Quando várias pessoas assistem a mesma transmissão, quem transmite manda diret
 
 ## Privacidade
 
-- **O vídeo não passa por servidor.** O vídeo e o áudio vão direto de um PC para o outro. Na mesma rede (ou Radmin/Hamachi), os PCs se encontram sozinhos.
+- **Servidor de conexão.** Desde a 1.14, o Gritude se conecta a um servidor (`187-53-120-108.sslip.io`) que apresenta os amigos uns aos outros e repassa os recados entre eles. Ele vê seu ID, nome, foto, se você está online e seu IP. Dá para trocar em **Configurações → Servidor de conexão**.
+- **O vídeo vai direto, exceto no servidor de vídeo.** Sem o servidor de vídeo, o vídeo e o áudio vão direto de um PC para o outro (na mesma rede ou Radmin/Hamachi os PCs se encontram sozinhos). Com o servidor de vídeo, que só funciona para quem conectou o Discord e está na lista de liberados, o vídeo passa pelo servidor. Só assiste quem o dono da tela aceitou, e quem é removido sai na hora. Dá para desligar em **Configurações → Usar servidor de vídeo**.
 - **Pela internet**, o Gritude usa rastreadores públicos de WebTorrent só como ponto de encontro: eles veem o seu IP (como em qualquer torrent), e só isso. Os recados entre amigos são assinados, então ninguém consegue se passar por outra pessoa. Dá para desligar em **Configurações → Achar amigos pela internet sem servidor** e usar só a rede ou o código de convite.
 - **Repasse P2P**: numa transmissão com várias pessoas, quem assiste pode repassar a imagem para outros espectadores **da mesma transmissão**. Ela nunca vai para quem não foi chamado.
 - **Sem conta e sem cadastro.** Seu nome, foto e amigos ficam guardados só no seu PC.
-- **Conectar com Discord é opcional.** O login é feito direto entre o seu PC e o Discord, sem servidor do Gritude. O Gritude só lê seu nome, @ e foto (escopo `identify`): não lê mensagens, servidores nem a lista de amigos. O seu @ só é mostrado para quem está na sua rede ou conectado com você.
+- **Conectar com Discord é opcional.** Com o servidor de conexão no ar, o login passa por ele e pede os escopos `identify` e `guilds`: nome, @, foto e a lista dos seus servidores (para sugerir amigos dos mesmos servidores). Não lê mensagens nem a lista de amigos. Sem o servidor, o login é feito direto entre o seu PC e o Discord, só com `identify`.
 - **Você controla quem assiste.** Sua tela só chega a quem você chamou ou a quem está na sua sala enquanto você transmite nela. A barra **AO VIVO** mostra quem está assistindo.
 - **Status no Discord é opcional.** Ele só conversa com o Discord aberto no seu próprio PC e pode ser desligado em **Meu perfil**.
 
@@ -287,6 +289,19 @@ A versão portátil não se atualiza: baixe a nova pela [página de versões](ht
 <summary><strong>Caí da transmissão ou saí sem querer</strong></summary>
 
 O Gritude abre um aviso com contagem regressiva de **15 segundos** para você voltar com um clique em **Reconectar**. Se você reabrir o app dentro desse tempo, o botão continua disponível. Se a transmissão ou sala tiver sido encerrada, o app avisa com clareza.
+
+</details>
+
+<details>
+<summary><strong>A etiqueta do vídeo mostra "Direto" em vez de "Servidor"</strong></summary>
+
+O servidor de vídeo só é usado quando **quem transmite e quem assiste** estão liberados. Abra **Configurações → Usar servidor de vídeo** e veja o aviso:
+
+- **Conecte o Discord**: entre em **Meu perfil → Conectar com Discord**.
+- **Não está liberado**: peça para quem administra o servidor adicionar a sua conta.
+- **Esperando o servidor de conexão**: confira sua internet; o Gritude tenta de novo sozinho.
+
+Enquanto isso, a transmissão funciona normalmente pelo P2P.
 
 </details>
 
